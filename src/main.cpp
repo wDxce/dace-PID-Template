@@ -2,12 +2,13 @@
 
 dace::Drive chassis(
 
-	{8,-9,10},//Left side of chassis motors 8, -9, 10
-	{-1,2,3},//Right side of chassis motors -1, 2, 3
+	{8,-9,10},	//Left side of chassis motors 8, -9, 10
+	{-1,2,3},	//Right side of chassis motors -1, 2, 3
 
-	11,//imu port
-	3.25,//wheel diameter in inches
-	450//Wheel RPM = cartridge * (motor gear / wheel gear)
+	11,			//imu port
+	3.25,		//wheel diameter in inches
+	450,		//Wheel RPM = cartridge * (motor gear / wheel gear)
+	blue 		//Motor cartridge Red(100 RPM) -- Green(200 RPM) -- Blue(600 RPM)
 
 );
 
@@ -57,7 +58,8 @@ void opcontrol() {
 		//dace::single_stick_drive(dace::Stick::Right, 10);
 		//dace::single_stick_drive(dace::Stick::Left, 10);
 
-		//Examples of subsystems(check subsystems.hpp and .cpp to add personal additions)                            
+		//Examples of subsystems(check subsystems.hpp and .cpp to add personal additions)     
+		                       
 		// Run for 10 ms then update
 		pros::delay(10);
 	}
